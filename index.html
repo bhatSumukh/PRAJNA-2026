@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRAJNA 2025 – Poornaprajna College, Udupi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">PRAJNA</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#explore">Explore</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#register">Register</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#pronites">Pronites</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#explore" onclick="closeMobile()">Explore</a>
+  <a href="#events" onclick="closeMobile()">Events</a>
+  <a href="#register" onclick="closeMobile()">Register</a>
+  <a href="#gallery" onclick="closeMobile()">Gallery</a>
+  <a href="#pronites" onclick="closeMobile()">Pronites</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+</div>
+
+<!-- ─── HERO ─── -->
+<section id="home">
+  <div class="hero-bg" id="heroBg"></div>
+
+  <p class="hero-eyebrow">Poornaprajna College (Autonomous), Udupi</p>
+  <h1 class="hero-title">PRAJNA</h1>
+  <p class="hero-year">2 0 2 5</p>
+  <p class="hero-date">December 4 &amp; 5, 2025 &nbsp;·&nbsp; Ancient Architecture meets Modern Technology</p>
+
+  <div class="hero-btns">
+    <a href="#events" class="btn-secondary">Explore Events</a>
+    <a href="#register" class="btn-primary">Register Now</a>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── EXPLORE ─── -->
+<section id="explore">
+  <div style="text-align:center;" class="reveal">
+    <h2 class="section-title">Explore PRAJNA</h2>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+  </div>
+
+  <div class="explore-grid">
+    <div class="explore-text reveal-left">
+      <p>After two successful years, <strong>PRAJNA</strong> returns grandly on December 4 &amp; 5, 2025, at Poornaprajna College (Autonomous), Udupi.</p>
+      <p>PRAJNA is the annual inter-collegiate fest that brings together the brightest minds and most creative talents from across the region. With a perfect blend of academic rigor and cultural extravaganza, PRAJNA offers a platform for students to showcase their skills, innovate, and celebrate.</p>
+      <p>This year's theme <strong>"Ancient Architecture"</strong> celebrates the timeless beauty and wisdom of classical designs while embracing modern innovation.</p>
+      <div class="college-badge">
+        <h3>Poornaprajna College (Autonomous), Udupi</h3>
+        <p>NAAC RE-ACCREDITED WITH "A+" GRADE (3.27 CGPA)</p>
+        <p style="margin-top:0.3rem; font-size:0.8rem; opacity:0.55;">Promoted and Managed by Udupi Shree Adamaru Matha Education Council, Bengaluru</p>
+      </div>
+    </div>
+    <div class="explore-image reveal-right">
+      <div class="arch-placeholder">
+        <div class="arch-inner">
+          <i class="fas fa-torii-gate"></i>
+          <span>ANCIENT ARCHITECTURE THEME</span>
+        </div>
+      </div>
+      <div class="frame-corner tl"></div>
+      <div class="frame-corner tr"></div>
+      <div class="frame-corner bl"></div>
+      <div class="frame-corner br"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── EVENTS ─── -->
+<section id="events">
+  <div style="text-align:center;" class="reveal">
+    <h2 class="section-title">Events</h2>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+  </div>
+
+  <div class="events-toggle reveal">
+    <button class="toggle-btn active" onclick="showTab('academic',this)">Academic Events</button>
+    <button class="toggle-btn" onclick="showTab('cultural',this)">Cultural Events</button>
+  </div>
+
+  <!-- Academic Events -->
+  <div class="events-panel active" id="academic">
+    <div class="event-card reveal">
+      <div class="event-num">01 / GAMING</div>
+      <div class="event-name">Battlegrounds Mobile</div>
+      <div class="event-desc">Mobile gaming competition – prove your squad dominance.</div>
+      <div class="event-meta">
+        <span class="meta-tag">Team: 2</span>
+        <span class="meta-tag">Dec 2, 2025</span>
+        <span class="meta-tag">9:30 AM</span>
+        <span class="meta-tag">ADL 03, 04 – SMV Block</span>
+      </div>
+      <div class="event-rules">
+        <p>◆ No cheating permitted &nbsp;◆ Custom rooms will be used<br>◆ Standard tournament rules apply</p>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-num">02 / TECHNICAL</div>
+      <div class="event-name">TechXcellence</div>
+      <div class="event-desc">Push the limits of your technical knowledge and problem-solving prowess.</div>
+      <div class="event-meta">
+        <span class="meta-tag">Individual</span>
+        <span class="meta-tag">Dec 2, 2025</span>
+        <span class="meta-tag">11:00 AM</span>
+        <span class="meta-tag">Computer Lab</span>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-num">03 / DEVELOPMENT</div>
+      <div class="event-name">Web Techno</div>
+      <div class="event-desc">A web development challenge where creativity meets functionality.</div>
+      <div class="event-meta">
+        <span class="meta-tag">Team: 2–3</span>
+        <span class="meta-tag">4 Hours</span>
+      </div>
+      <div class="event-rules">
+        <p>◆ Judging based on creativity and functionality<br>◆ Bring your own design assets</p>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-num">04 / CODING</div>
+      <div class="event-name">Hackathon</div>
+      <div class="event-desc">24 hours. One problem. Infinite solutions. Build something that matters.</div>
+      <div class="event-meta">
+        <span class="meta-tag">Team: 3–4</span>
+        <span class="meta-tag">24 Hours</span>
+      </div>
+      <div class="event-rules">
+        <p>◆ Problem statement revealed on the spot<br>◆ All tech stacks welcome</p>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-num">05 / CYBERSECURITY</div>
+      <div class="event-name">Digital Heist</div>
+      <div class="event-desc">A cybersecurity challenge testing your ethical hacking skills.</div>
+      <div class="event-meta">
+        <span class="meta-tag">Team: 2</span>
+        <span class="meta-tag">3 Hours</span>
+      </div>
+      <div class="event-rules">
+        <p>◆ Ethical hacking rules apply<br>◆ No destructive attacks permitted</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cultural Events -->
+  <div class="events-panel" id="cultural">
+    <div class="event-card reveal">
+      <div class="event-num">01 / MUSIC</div>
+      <div class="event-name">Patriotic Songs</div>
+      <div class="event-desc">Celebrate the spirit of the nation through the power of melody.</div>
+      <div class="event-meta">
+        <span class="meta-tag">Solo / Group (max 5)</span>
+        <span class="meta-tag">5 Minutes</span>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-num">02 / DANCE</div>
+      <div class="event-name">Classical Dance</div>
+      <div class="event-desc">Express grace, tradition, and artistry through classical Indian dance forms.</div>
+      <div class="event-meta">
+        <span class="meta-tag">Solo</span>
+        <span class="meta-tag">7 Minutes</span>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-num">03 / DANCE</div>
+      <div class="event-name">Folk Dance</div>
+      <div class="event-desc">Bring your culture alive with vibrant, energetic folk performances.</div>
+      <div class="event-meta">
+        <span class="meta-tag">Group: 5–10</span>
+        <span class="meta-tag">8 Minutes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── REGISTER ─── -->
+<section id="register">
+  <div style="text-align:center;" class="reveal">
+    <h2 class="section-title">Register</h2>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+    <p style="font-style:italic; color:rgba(240,230,208,0.55); margin-top:0.5rem;">Secure your spot at PRAJNA 2025</p>
+  </div>
+
+  <div class="register-container reveal">
+    <form id="regForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="fname" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label>College Name</label>
+          <input type="text" id="college" placeholder="Your institution" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 00000 00000" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Select Event</label>
+        <div class="select-wrapper">
+          <select id="event" required>
+            <option value="" disabled selected>Choose an event…</option>
+            <optgroup label="Academic Events">
+              <option>Battlegrounds Mobile</option>
+              <option>TechXcellence</option>
+              <option>Web Techno</option>
+              <option>Hackathon</option>
+              <option>Digital Heist</option>
+            </optgroup>
+            <optgroup label="Cultural Events">
+              <option>Patriotic Songs</option>
+              <option>Classical Dance</option>
+              <option>Folk Dance</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit"><span>Register Now &nbsp;◆</span></button>
+    </form>
+    <div class="success-msg" id="successMsg">
+      <i class="fas fa-check-circle"></i>
+      <h3>Registration Successful!</h3>
+      <p>Welcome to PRAJNA 2025. We'll be in touch soon.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY ─── -->
+<section id="gallery">
+  <div style="text-align:center;" class="reveal">
+    <h2 class="section-title">Gallery</h2>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+  </div>
+
+  <div class="gallery-grid reveal" style="max-width:1200px; margin:4rem auto 0;">
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <i class="fas fa-image"></i>
+        <span>PRAJNA 2023 HIGHLIGHTS</span>
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <i class="fas fa-users"></i>
+        <span>TEAM EVENTS</span>
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <i class="fas fa-laptop-code"></i>
+        <span>HACKATHON 2024</span>
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <i class="fas fa-music"></i>
+        <span>CULTURAL NIGHT</span>
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <i class="fas fa-trophy"></i>
+        <span>PRIZE CEREMONY</span>
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <i class="fas fa-camera"></i>
+        <span>CAMPUS MOMENTS</span>
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRONITES ─── -->
+<section id="pronites">
+  <div class="reveal">
+    <h2 class="section-title">Pronites</h2>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+  </div>
+  <p class="pronites-desc reveal">Pronites are the highlight of PRAJNA, featuring spectacular performances by renowned artists and bands that will electrify the night.</p>
+
+  <div class="pronites-banner reveal" style="max-width:1000px; margin:3rem auto 0;">
+    <div class="pronites-banner-inner">
+      <i class="fas fa-microphone-alt"></i>
+      <h3>Artist Announcement Coming Soon</h3>
+      <p>Stay tuned for the big reveal – December 4 &amp; 5, 2025</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div style="text-align:center;" class="reveal">
+    <h2 class="section-title">About</h2>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div class="campus-placeholder reveal-left">
+      <i class="fas fa-university"></i>
+      <span>POORNAPRAJNA COLLEGE CAMPUS</span>
+    </div>
+    <div class="about-text reveal-right">
+      <h3>Poornaprajna College (Autonomous), Udupi</h3>
+      <p>A premier educational institution known for academic excellence and holistic development. Reaccredited with an "A+" grade by NAAC with a CGPA of 3.27, Poornaprajna College stands as a beacon of quality education in coastal Karnataka.</p>
+      <p>Promoted and managed by the Udupi Shree Adamaru Matha Education Council, Bengaluru, the college fosters a culture of innovation, creativity, and cultural pride.</p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-num">A+</span>
+          <span class="stat-label">NAAC Grade</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3.27</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">2025</span>
+          <span class="stat-label">Edition</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-logo">PRAJNA</div>
+  <p class="footer-tagline">Think. Create. Celebrate.</p>
+  <div class="social-links">
+    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <div class="ornament" style="margin-bottom:1.5rem;">
+    <div class="ornament-line"></div>
+    <div class="ornament-diamond"></div>
+    <div class="ornament-line right"></div>
+  </div>
+  <p class="footer-copy">© 2025 PRAJNA – Poornaprajna College (Autonomous), Udupi &nbsp;·&nbsp; All Rights Reserved</p>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scrollTop" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="script.js">
+ 
+</script>
+</body>
+</html>
