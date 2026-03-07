@@ -54,13 +54,6 @@ function showTab(id, btn) {
   btn.classList.add("active");
 }
 
-/* ─── FORM SUBMIT ─── */
-document.getElementById("regForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  this.style.display = "none";
-  document.getElementById("successMsg").style.display = "block";
-});
-
 /* ─── SCROLL TO TOP ─── */
 document.getElementById("scrollTop").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -104,3 +97,10 @@ function doPost(e) {
 
   return ContentService.createTextOutput("Success");
 }
+
+let eventSbtn = document.getElementById("event-selector");
+let eventContainer = document.getElementById("event-selector-container");
+
+eventSbtn.addEventListener("click", () => {
+  eventContainer.style.display = "block";
+});
