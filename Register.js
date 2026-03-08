@@ -1,5 +1,5 @@
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxZYcvoF3GhRcqGjtiDs3DfVH5RgApI3PXb_sbmYcljSJQanUaRzEedjeNwqv_LU0xf/exec";
+  "https://script.google.com/macros/s/AKfycbyiLByFfni-6qmCL29zdLN7WYH0PNe6q8_aZrfMIPSoNccEj26meN3Hyt87-HpDBDNU/exec";
 
 const form = document.getElementById("regForm");
 
@@ -7,6 +7,9 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const btn = document.getElementById("btn-submit");
+
+  if (btn.disabled) return;
+
   btn.disabled = true;
   btn.innerHTML = "Registering... ◆";
 
@@ -18,9 +21,24 @@ form.addEventListener("submit", function (e) {
 
   const eventsString = events.join(", ");
 
+  const feeMap = {
+    "Battlegrounds Mobile": 100,
+    TechXcellence: 200,
+    "Web Techno": 300,
+    Hackathon: 400,
+    "Digital Heist": 500,
+    "Patriotic Songs": 600,
+    "Classical Dance": 700,
+    "Folk Dance": 800,
+  };
+
+  const totalFee = events.reduce((sum, event) => sum + (feeMap[event] || 0), 0);
+
   const formData = new FormData(form);
   // convert array to string
   formData.append("event", eventsString);
+
+  formData.append("totalFee", totalFee);
 
   fetch(scriptURL, {
     method: "POST",
@@ -41,6 +59,7 @@ form.addEventListener("submit", function (e) {
         `Phone: ${phone}\n` +
         `Email: ${email}\n` +
         `Events: ${eventsString}\n\n` +
+        `Total Fee: ₹${totalFee}\n\n` +
         `Registration Time: ${new Date().toLocaleString("en-IN")}`;
 
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

@@ -86,13 +86,18 @@ revealEls.forEach((el) => observer.observe(el));
 function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
 
+  Logger.log(e.parameter.totalFee);
+
   sheet.appendRow([
     e.parameter.name,
     e.parameter.phone,
     e.parameter.email,
     e.parameter.college,
     e.parameter.event,
+    e.parameter.totalFee,
     new Date(),
+
+    
   ]);
 
   return ContentService.createTextOutput("Success");
