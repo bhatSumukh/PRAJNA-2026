@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "d:\\prajna2026\\PRAJNA-2026\\index.html"
+            "file": "d:\\prajna-2026\\index.html"
         }
     ]
 }
