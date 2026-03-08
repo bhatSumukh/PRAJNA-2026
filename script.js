@@ -96,8 +96,6 @@ function doPost(e) {
     e.parameter.event,
     e.parameter.totalFee,
     new Date(),
-
-    
   ]);
 
   return ContentService.createTextOutput("Success");
