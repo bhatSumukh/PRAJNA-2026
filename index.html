@@ -13,18 +13,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="icon" href="Images/favicon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- ─── NAV ─── -->
     <nav id="navbar">
-      <a href="#home" class="nav-logo">PRAJNA</a>
+      <div class="logo-placeholder">
+        <a href="https://ppc.ac.in/" target="_blank" class="nav-logo"
+          ><img src="Images/clg-logo.png" alt="" class="nav-logo-img"
+        /></a>
+      </div>
+
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#explore">Explore</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#register">Register</a></li>
-        <li><a href="#pronites">Pronites</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#about">About</a></li>
       </ul>
@@ -39,7 +43,6 @@
       <a href="#events" onclick="closeMobile()">Events</a>
       <a href="#register" onclick="closeMobile()">Register</a>
       <a href="#gallery" onclick="closeMobile()">Gallery</a>
-      <a href="#pronites" onclick="closeMobile()">Pronites</a>
       <a href="#about" onclick="closeMobile()">About</a>
     </div>
 
@@ -48,22 +51,22 @@
       <div class="hero-bg" id="heroBg"></div>
 
       <p class="hero-eyebrow">Poornaprajna College (Autonomous), Udupi</p>
-      <h1 class="hero-title">PRAJNA</h1>
-      <p class="hero-year">2 0 2 6</p>
-      <p class="hero-date">
-        April 1 &amp; 2, 2026 &nbsp;·&nbsp; Ancient Architecture meets Modern
-        Technology
-      </p>
+
+      <div class="hero-logo-container">
+        <img src="Images/nav-logo2.png" alt="Prajna Logo" class="hero-logo" />
+      </div>
+
+      <p class="hero-date">April 6 &amp; 7, 2026</p>
 
       <div class="hero-btns">
         <a href="#events" class="btn-secondary">Explore Events</a>
         <a href="#register" class="btn-primary">Register Now</a>
       </div>
 
-      <div class="hero-scroll">
+      <!-- <div class="hero-scroll">
         <span>Scroll</span>
         <div class="scroll-line"></div>
-      </div>
+      </div> -->
     </section>
 
     <!-- ─── EXPLORE ─── -->
@@ -145,6 +148,12 @@
         <div class="event-card reveal">
           <div class="event-num">01 / GAMING</div>
           <div class="event-name">Battlegrounds Mobile</div>
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="event-image"
+            />
+          </div>
           <div class="event-desc">
             Mobile gaming competition – prove your squad dominance.
           </div>
@@ -166,6 +175,12 @@
         <div class="event-card reveal">
           <div class="event-num">02 / TECHNICAL</div>
           <div class="event-name">TechXcellence</div>
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="event-image"
+            />
+          </div>
           <div class="event-desc">
             Push the limits of your technical knowledge and problem-solving
             prowess.
@@ -182,6 +197,12 @@
         <div class="event-card reveal">
           <div class="event-num">03 / DEVELOPMENT</div>
           <div class="event-name">Web Techno</div>
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="event-image"
+            />
+          </div>
           <div class="event-desc">
             A web development challenge where creativity meets functionality.
           </div>
@@ -201,6 +222,12 @@
         <div class="event-card reveal">
           <div class="event-num">04 / CODING</div>
           <div class="event-name">Hackathon</div>
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="event-image"
+            />
+          </div>
           <div class="event-desc">
             24 hours. One problem. Infinite solutions. Build something that
             matters.
@@ -221,6 +248,12 @@
         <div class="event-card reveal">
           <div class="event-num">05 / CYBERSECURITY</div>
           <div class="event-name">Digital Heist</div>
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="event-image"
+            />
+          </div>
           <div class="event-desc">
             A cybersecurity challenge testing your ethical hacking skills.
           </div>
@@ -243,6 +276,12 @@
         <div class="event-card reveal">
           <div class="event-num">01 / MUSIC</div>
           <div class="event-name">Patriotic Songs</div>
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="event-image"
+            />
+          </div>
           <div class="event-desc">
             Celebrate the spirit of the nation through the power of melody.
           </div>
@@ -256,6 +295,12 @@
         <div class="event-card reveal">
           <div class="event-num">02 / DANCE</div>
           <div class="event-name">Classical Dance</div>
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="event-image"
+            />
+          </div>
           <div class="event-desc">
             Express grace, tradition, and artistry through classical Indian
             dance forms.
@@ -270,6 +315,12 @@
         <div class="event-card reveal">
           <div class="event-num">03 / DANCE</div>
           <div class="event-name">Folk Dance</div>
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="event-image"
+            />
+          </div>
           <div class="event-desc">
             Bring your culture alive with vibrant, energetic folk performances.
           </div>
@@ -283,6 +334,10 @@
     </section>
 
     <!-- ─── REGISTER ─── -->
+    <!-- ─── REGISTER ─── -->
+    <!-- PASTE THIS ENTIRE BLOCK IN PLACE OF YOUR EXISTING <section id="register"> -->
+    <!-- ─── REGISTER ─── -->
+    <!-- Replace your entire <section id="register">…</section> with this -->
     <section id="register">
       <div style="text-align: center" class="reveal">
         <h2 class="section-title">Register</h2>
@@ -294,35 +349,40 @@
         <p
           style="
             font-style: italic;
-            color: rgba(240, 230, 208, 0.55);
+            color: rgba(14, 62, 69, 0.55);
             margin-top: 0.5rem;
           "
         >
-          Secure your spot at PRAJNA 2025
+          Secure your spot at PRAJNA 2026
         </p>
         <p
           style="
             font-style: italic;
-            color: rgba(240, 230, 208, 0.55);
-            margin-top: 0.5rem;
+            color: rgba(14, 62, 69, 0.45);
+            margin-top: 0.3rem;
+            font-size: 0.95rem;
           "
         >
-          After registration, you will be redirected to Whatsapp for payment and
+          After registration, you will be redirected to WhatsApp for payment and
           confirmation.
         </p>
       </div>
 
       <div class="register-container reveal">
-        <form id="regForm">
+        <form id="regForm" novalidate>
+          <div class="details">
+            <p>Enter the Team Leader or Faculty Head's details.</p>
+          </div>
+
           <div class="form-row">
             <div class="form-group">
               <label>Full Name</label>
               <input
                 type="text"
                 id="fname"
+                name="name"
                 placeholder="Your full name"
                 required
-                name="name"
               />
             </div>
             <div class="form-group">
@@ -330,21 +390,22 @@
               <input
                 type="text"
                 id="college"
+                name="college"
                 placeholder="Your institution"
                 required
-                name="college"
               />
             </div>
           </div>
+
           <div class="form-row">
             <div class="form-group">
               <label>Email Address</label>
               <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="you@example.com"
                 required
-                name="email"
               />
             </div>
             <div class="form-group">
@@ -352,9 +413,9 @@
               <input
                 type="tel"
                 id="phone"
+                name="phone"
                 placeholder="+91 00000 00000"
                 required
-                name="phone"
               />
             </div>
           </div>
@@ -363,66 +424,423 @@
             <span>Select Events &nbsp;◆</span>
           </button>
 
-          <div class="form-group" id="event-selector-container">
+          <div id="event-selector-container">
+            <!-- Plain text fee line, just like the screenshot -->
+            <p class="fee-inline">
+              Total Registration Fee ₹ <span id="feeDisplay">0</span>
+            </p>
+
             <div class="checkbox-group">
               <p class="category">Academic Events</p>
 
               <label class="checkbox-item">
+                <span class="checkmark-box"></span>
                 <input
                   type="checkbox"
                   name="event[]"
                   value="Battlegrounds Mobile"
+                  id="bgmi"
+                  data-fee="100"
                 />
-                <span>Battlegrounds Mobile</span>
+                <span
+                  >Battlegrounds Mobile <em class="fee-plain">₹100</em></span
+                >
               </label>
+              <div class="event-reg" id="bgmi-reg">
+                <p class="participants-heading">Participants (Team of 2)</p>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Battlegrounds Mobile"
+                    data-index="1"
+                    placeholder="Player 1 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Battlegrounds Mobile"
+                    data-index="1"
+                    placeholder="Player 1 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Battlegrounds Mobile"
+                    data-index="2"
+                    placeholder="Player 2 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Battlegrounds Mobile"
+                    data-index="2"
+                    placeholder="Player 2 – Phone"
+                  />
+                </div>
+              </div>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="event[]" value="TechXcellence" />
-                <span>TechXcellence</span>
+                <span class="checkmark-box"></span>
+                <input
+                  type="checkbox"
+                  name="event[]"
+                  value="TechXcellence"
+                  id="techx"
+                  data-fee="200"
+                />
+                <span>TechXcellence <em class="fee-plain">₹200</em></span>
               </label>
+              <div class="event-reg" id="techx-reg">
+                <p class="participants-heading">Participant (Individual)</p>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="TechXcellence"
+                    data-index="1"
+                    placeholder="Participant – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="TechXcellence"
+                    data-index="1"
+                    placeholder="Participant – Phone"
+                  />
+                </div>
+              </div>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="event[]" value="Web Techno" />
-                <span>Web Techno</span>
+                <span class="checkmark-box"></span>
+                <input
+                  type="checkbox"
+                  name="event[]"
+                  value="Web Techno"
+                  id="web"
+                  data-fee="300"
+                />
+                <span>Web Techno <em class="fee-plain">₹300</em></span>
               </label>
+              <div class="event-reg" id="web-reg">
+                <p class="participants-heading">Participants (Team of 2–3)</p>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Web Techno"
+                    data-index="1"
+                    placeholder="Member 1 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Web Techno"
+                    data-index="1"
+                    placeholder="Member 1 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Web Techno"
+                    data-index="2"
+                    placeholder="Member 2 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Web Techno"
+                    data-index="2"
+                    placeholder="Member 2 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Web Techno"
+                    data-index="3"
+                    placeholder="Member 3 – Full Name (optional)"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Web Techno"
+                    data-index="3"
+                    placeholder="Member 3 – Phone (optional)"
+                  />
+                </div>
+              </div>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="event[]" value="Hackathon" />
-                <span>Hackathon</span>
+                <span class="checkmark-box"></span>
+                <input
+                  type="checkbox"
+                  name="event[]"
+                  value="Hackathon"
+                  id="hack"
+                  data-fee="400"
+                />
+                <span>Hackathon <em class="fee-plain">₹400</em></span>
               </label>
+              <div class="event-reg" id="hack-reg">
+                <p class="participants-heading">Participants (Team)</p>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Hackathon"
+                    data-index="1"
+                    placeholder="Member 1 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Hackathon"
+                    data-index="1"
+                    placeholder="Member 1 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Hackathon"
+                    data-index="2"
+                    placeholder="Member 2 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Hackathon"
+                    data-index="2"
+                    placeholder="Member 2 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Hackathon"
+                    data-index="3"
+                    placeholder="Member 3 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Hackathon"
+                    data-index="3"
+                    placeholder="Member 3 – Phone"
+                  />
+                </div>
+              </div>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="event[]" value="Digital Heist" />
-                <span>Digital Heist</span>
+                <span class="checkmark-box"></span>
+                <input
+                  type="checkbox"
+                  name="event[]"
+                  value="Digital Heist"
+                  id="dheist"
+                  data-fee="500"
+                />
+                <span>Digital Heist <em class="fee-plain">₹500</em></span>
               </label>
+              <div class="event-reg" id="dheist-reg">
+                <p class="participants-heading">Participant (Individual)</p>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Digital Heist"
+                    data-index="1"
+                    placeholder="Participant – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Digital Heist"
+                    data-index="1"
+                    placeholder="Participant – Phone"
+                  />
+                </div>
+              </div>
 
               <p class="category">Cultural Events</p>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="event[]" value="Patriotic Songs" />
-                <span>Patriotic Songs</span>
+                <span class="checkmark-box"></span>
+                <input
+                  type="checkbox"
+                  name="event[]"
+                  value="Patriotic Songs"
+                  id="pat"
+                  data-fee="600"
+                />
+                <span>Patriotic Songs <em class="fee-plain">₹600</em></span>
               </label>
+              <div class="event-reg" id="pat-reg">
+                <p class="participants-heading">Participants</p>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Patriotic Songs"
+                    data-index="1"
+                    placeholder="Participant 1 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Patriotic Songs"
+                    data-index="1"
+                    placeholder="Participant 1 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Patriotic Songs"
+                    data-index="2"
+                    placeholder="Participant 2 – Full Name (optional)"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Patriotic Songs"
+                    data-index="2"
+                    placeholder="Participant 2 – Phone (optional)"
+                  />
+                </div>
+              </div>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="event[]" value="Classical Dance" />
-                <span>Classical Dance</span>
+                <span class="checkmark-box"></span>
+                <input
+                  type="checkbox"
+                  name="event[]"
+                  value="Classical Dance"
+                  id="cdance"
+                  data-fee="700"
+                />
+                <span>Classical Dance <em class="fee-plain">₹700</em></span>
               </label>
+              <div class="event-reg" id="cdance-reg">
+                <p class="participants-heading">Participants</p>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Classical Dance"
+                    data-index="1"
+                    placeholder="Dancer 1 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Classical Dance"
+                    data-index="1"
+                    placeholder="Dancer 1 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Classical Dance"
+                    data-index="2"
+                    placeholder="Dancer 2 – Full Name (optional)"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Classical Dance"
+                    data-index="2"
+                    placeholder="Dancer 2 – Phone (optional)"
+                  />
+                </div>
+              </div>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="event[]" value="Folk Dance" />
-                <span>Folk Dance</span>
+                <span class="checkmark-box"></span>
+                <input
+                  type="checkbox"
+                  name="event[]"
+                  value="Folk Dance"
+                  id="fdance"
+                  data-fee="800"
+                />
+                <span>Folk Dance <em class="fee-plain">₹800</em></span>
               </label>
+              <div class="event-reg" id="fdance-reg">
+                <p class="participants-heading">Participants (Group)</p>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Folk Dance"
+                    data-index="1"
+                    placeholder="Dancer 1 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Folk Dance"
+                    data-index="1"
+                    placeholder="Dancer 1 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Folk Dance"
+                    data-index="2"
+                    placeholder="Dancer 2 – Full Name"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Folk Dance"
+                    data-index="2"
+                    placeholder="Dancer 2 – Phone"
+                  />
+                </div>
+                <div class="participant-row">
+                  <input
+                    type="text"
+                    class="participant-name"
+                    data-event="Folk Dance"
+                    data-index="3"
+                    placeholder="Dancer 3 – Full Name (optional)"
+                  />
+                  <input
+                    type="tel"
+                    class="participant-phone"
+                    data-event="Folk Dance"
+                    data-index="3"
+                    placeholder="Dancer 3 – Phone (optional)"
+                  />
+                </div>
+              </div>
             </div>
+            <!-- /.checkbox-group -->
 
             <button
               type="submit"
               class="btn-submit"
               id="btn-submit"
-              style="margin-top: 20px"
+              style="margin-top: 28px"
             >
               <span>Register Now &nbsp;◆</span>
             </button>
           </div>
+          <!-- /#event-selector-container -->
         </form>
 
         <div class="success-msg" id="successMsg">
@@ -431,6 +849,7 @@
           <p>Welcome to PRAJNA 2026. We'll be in touch soon.</p>
         </div>
       </div>
+      <!-- /.register-container -->
     </section>
 
     <!-- ─── GALLERY ─── -->
@@ -493,80 +912,6 @@
       </div>
     </section>
 
-    <!-- ─── PRONITES ─── -->
-    <section id="pronites">
-      <div class="reveal">
-        <h2 class="section-title">Pronites</h2>
-        <div class="ornament">
-          <div class="ornament-line"></div>
-          <div class="ornament-diamond"></div>
-          <div class="ornament-line right"></div>
-        </div>
-      </div>
-      <p class="pronites-desc reveal">
-        Pronites are the highlight of PRAJNA, featuring spectacular performances
-        by renowned artists and bands that will electrify the night.
-      </p>
-
-      <div
-        class="pronites-banner reveal"
-        style="max-width: 1000px; margin: 3rem auto 0"
-      >
-        <div class="pronites-banner-inner">
-          <i class="fas fa-microphone-alt"></i>
-          <h3>Artist Announcement Coming Soon</h3>
-          <p>Stay tuned for the big reveal – December 4 &amp; 5, 2025</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── ABOUT ─── -->
-    <section id="about">
-      <div style="text-align: center" class="reveal">
-        <h2 class="section-title">About</h2>
-        <div class="ornament">
-          <div class="ornament-line"></div>
-          <div class="ornament-diamond"></div>
-          <div class="ornament-line right"></div>
-        </div>
-      </div>
-
-      <div class="about-grid">
-        <div class="campus-placeholder reveal-left">
-          <i class="fas fa-university"></i>
-          <span>POORNAPRAJNA COLLEGE CAMPUS</span>
-        </div>
-        <div class="about-text reveal-right">
-          <h3>Poornaprajna College (Autonomous), Udupi</h3>
-          <p>
-            A premier educational institution known for academic excellence and
-            holistic development. Reaccredited with an "A+" grade by NAAC with a
-            CGPA of 3.27, Poornaprajna College stands as a beacon of quality
-            education in coastal Karnataka.
-          </p>
-          <p>
-            Promoted and managed by the Udupi Shree Adamaru Matha Education
-            Council, Bengaluru, the college fosters a culture of innovation,
-            creativity, and cultural pride.
-          </p>
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-num">A+</span>
-              <span class="stat-label">NAAC Grade</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">3.27</span>
-              <span class="stat-label">CGPA</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">2025</span>
-              <span class="stat-label">Edition</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ─── FOOTER ─── -->
     <footer>
       <div class="footer-logo">PRAJNA</div>
@@ -578,14 +923,30 @@
           target="_blank"
           ><i class="fab fa-instagram"></i
         ></a>
-        <!-- <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a> -->
+        <a
+          href="https://www.facebook.com/poornaprajnacollegeudupi"
+          class="social-link"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+
+        <!-- <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> -->
+
+        <a
+          href="https://youtube.com/@poornaprajnacollegeudupi8976?si=t0HGEsLytRDHxcY6"
+          class="social-link"
+          target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+
         <a
           href="https://www.linkedin.com/school/ppcudupi/"
           class="social-link"
           target="_blank"
           ><i class="fab fa-linkedin-in"></i
+        ></a>
+
+        <a href="https://ppc.ac.in/" class="social-link" target="_blank"
+          ><i class="fa-solid fa-building-columns"></i
         ></a>
       </div>
       <div class="ornament" style="margin-bottom: 1.5rem">
@@ -605,7 +966,7 @@
     </button>
 
     <script src="script.js"></script>
-    <script src="Register.js"></script>
+    <!-- <script src="Register.js"></script> -->
     <!-- <script src="redirect.js"></script> -->
   </body>
 </html>
