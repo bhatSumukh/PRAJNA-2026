@@ -137,7 +137,7 @@ if (scrollTopBtn) {
   const EVENT_PARTICIPANTS = {
     "Bug Bash": 2,
     "Secret Vault": 2,
-    Bgmi: 4,
+    "Bgmi": 4,
     "It Quiz": 2,
     "Book Hunt": 2,
     "Shark Task Competition": 2,
@@ -159,15 +159,22 @@ if (scrollTopBtn) {
     "Story Writing": 1,
     "Turn Coat": 1,
     "Batuni Batak Debate": 2,
-    Antakshari: 2,
+    "Antakshari": 2,
     "Science Melody": 2,
-    Collage: 2,
-    Drawing: 1,
+    "Turn Coat(Physics)": 2,
+    "Collage": 2,
+    "Drawing": 1,
     "Collage Making": 2,
-    Skit: 10,
-    Padachitra: 1,
+    "Skit": 10,
+    "Padachitra": 1,
     "Hani Hani Kavithe": 1,
     "Data Interpretation": 2,
+    "Tala Taranga": 8,
+    "Akarshati": 1,
+    "Vridavana Vaibhava": 8,
+    "Swaranjali": 5,
+    "Jagruti": 8,
+    "Ayodhya Vaibhavam": 8,
   };
 
   /* ── Fee map (₹ per event) — adjust as needed ────────────────── */
@@ -198,6 +205,7 @@ if (scrollTopBtn) {
     "Batuni Batak Debate": 100,
     Antakshari: 100,
     "Science Melody": 100,
+    "Turn Coat(Physics)": 100,
     Collage: 100,
     Drawing: 100,
     "Collage Making": 100,
@@ -205,6 +213,12 @@ if (scrollTopBtn) {
     Padachitra: 100,
     "Hani Hani Kavithe": 100,
     "Data Interpretation": 100,
+    "Tala Taranga": 100,
+    Akarshati: 100,
+    "Vridavana Vaibhava": 100,
+    Swaranjali: 100,
+    Jagruti: 100,
+    "Ayodhya Vaibhavam": 100,
   };
 
   /* ── Category grouping ───────────────────────────────────────── */
@@ -237,6 +251,7 @@ if (scrollTopBtn) {
       "Batuni Batak Debate",
       "Antakshari",
       "Science Melody",
+      "Turn Coat(Physics)",
       "Collage",
       "Drawing",
       "Collage Making",
@@ -244,7 +259,14 @@ if (scrollTopBtn) {
       "Padachitra",
       "Hani Hani Kavithe",
     ],
-    "Cultural Events": [],
+    "Cultural Events": [
+      "Tala Taranga",
+      "Akarshati",
+      "Vridavana Vaibhava",
+      "Swaranjali",
+      "Jagruti",
+      "Ayodhya Vaibhavam",
+    ],
   };
 
   /* ── Helpers ─────────────────────────────────────────────────── */
@@ -335,7 +357,7 @@ if (scrollTopBtn) {
    ───────────────────────────────────────────────────────────────── */
 (function initRegistration() {
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbxiwFAVuJMjT9wF0S5-2Fp0EUGS7bR3qMH4cOfZPaBq0rSmhjbdOpvxpV50BvZrbnOi/exec";
+    "https://script.google.com/macros/s/AKfycbzyYXNgsZLejm-BAXyDc3EhJ8J52DMj4SlHnucsaDPbf_9kyFjZEdRriH51vBfaskKK/exec";
   const WHATSAPP_NUMBER = "919019177440";
 
   const FEE_MAP = {
@@ -365,6 +387,7 @@ if (scrollTopBtn) {
     "Batuni Batak Debate": 100,
     Antakshari: 100,
     "Science Melody": 100,
+    "Turn Coat(Physics)": 100,
     Collage: 100,
     Drawing: 100,
     "Collage Making": 100,
@@ -372,6 +395,12 @@ if (scrollTopBtn) {
     Padachitra: 100,
     "Hani Hani Kavithe": 100,
     "Data Interpretation": 100,
+    "Tala Taranga": 100,
+    Akarshati: 100,
+    "Vridavana Vaibhava": 100,
+    Swaranjali: 100,
+    Jagruti: 100,
+    "Ayodhya Vaibhavam": 100,
   };
 
   const form = document.getElementById("regForm");
@@ -476,56 +505,55 @@ if (scrollTopBtn) {
   });
 })();
 
-
 /* ═══════════════════════════════════════════════════════════════
    EVENTS POPUP — ADD THIS BLOCK TO YOUR script.js
    ═══════════════════════════════════════════════════════════════ */
 
 (function initEventPopup() {
-  const overlay    = document.getElementById('eventOverlay');
-  const closeBtn   = document.getElementById('popupClose');
-  const popupName  = document.getElementById('popupEventName');
-  const popupImg   = document.getElementById('popupImage');
-  const popupDets  = document.getElementById('popupDetails');
+  const overlay = document.getElementById("eventOverlay");
+  const closeBtn = document.getElementById("popupClose");
+  const popupName = document.getElementById("popupEventName");
+  const popupImg = document.getElementById("popupImage");
+  const popupDets = document.getElementById("popupDetails");
 
   if (!overlay) return;
 
   /* Open: fired by any "Explore More" button click */
-  document.addEventListener('click', function (e) {
-    const btn = e.target.closest('.explore-btn');
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".explore-btn");
     if (!btn) return;
 
-    const card = btn.closest('.event-card');
+    const card = btn.closest(".event-card");
     if (!card) return;
 
     /* Pull data from card's data attributes */
-    popupName.textContent = card.dataset.name  || '';
-    popupImg.src          = card.dataset.img   || '';
-    popupImg.alt          = card.dataset.name  || '';
+    popupName.textContent = card.dataset.name || "";
+    popupImg.src = card.dataset.img || "";
+    popupImg.alt = card.dataset.name || "";
 
     /* Clone the hidden .event-details innerHTML into the popup */
-    const detailsEl = card.querySelector('.event-details');
-    popupDets.innerHTML = detailsEl ? detailsEl.innerHTML : '';
+    const detailsEl = card.querySelector(".event-details");
+    popupDets.innerHTML = detailsEl ? detailsEl.innerHTML : "";
 
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 
   /* Close: X button */
-  closeBtn.addEventListener('click', closePopup);
+  closeBtn.addEventListener("click", closePopup);
 
   /* Close: click outside the popup box */
-  overlay.addEventListener('click', function (e) {
+  overlay.addEventListener("click", function (e) {
     if (e.target === overlay) closePopup();
   });
 
   /* Close: Escape key */
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closePopup();
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closePopup();
   });
 
   function closePopup() {
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
   }
 })();
