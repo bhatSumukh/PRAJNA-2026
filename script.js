@@ -1,7 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════════
-   PRAJNA 2026 — script.js  (single merged file)
+   PRAJNA 2026 — script.js
    ═══════════════════════════════════════════════════════════════════ */
-
 
 /* ─────────────────────────────────────────────────────────────────
    1. HERO PARTICLES
@@ -13,7 +12,7 @@
   for (let i = 0; i < 25; i++) {
     const p = document.createElement("div");
     p.className = "particle";
-    const size  = Math.random() * 4 + 1;
+    const size = Math.random() * 4 + 1;
     const color = colors[Math.floor(Math.random() * colors.length)];
     p.style.cssText = `
       width:${size}px; height:${size}px;
@@ -27,30 +26,31 @@
   }
 })();
 
-
 /* ─────────────────────────────────────────────────────────────────
    2. NAVBAR SCROLL BEHAVIOUR
    ───────────────────────────────────────────────────────────────── */
-const navbar       = document.getElementById("navbar");
+const navbar = document.getElementById("navbar");
 const scrollTopBtn = document.getElementById("scrollTop");
 
 window.addEventListener("scroll", () => {
-  if (navbar)       navbar.classList.toggle("scrolled", window.scrollY > 60);
-  if (scrollTopBtn) scrollTopBtn.classList.toggle("visible", window.scrollY > 400);
+  if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 60);
+  if (scrollTopBtn)
+    scrollTopBtn.classList.toggle("visible", window.scrollY > 400);
 });
-
 
 /* ─────────────────────────────────────────────────────────────────
    3. MOBILE MENU TOGGLE
    ───────────────────────────────────────────────────────────────── */
-const hamburger  = document.getElementById("hamburger");
+const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 
 if (hamburger && mobileMenu) {
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     mobileMenu.classList.toggle("open");
-    document.body.style.overflow = mobileMenu.classList.contains("open") ? "hidden" : "";
+    document.body.style.overflow = mobileMenu.classList.contains("open")
+      ? "hidden"
+      : "";
   });
 }
 
@@ -61,20 +61,20 @@ function closeMobile() {
   document.body.style.overflow = "";
 }
 
-
 /* ─────────────────────────────────────────────────────────────────
    4. EVENTS TAB SWITCHER
    ───────────────────────────────────────────────────────────────── */
 function showTab(id, btn) {
-  document.querySelectorAll(".events-panel").forEach(p => p.classList.remove("active"));
-  document.querySelectorAll(".toggle-btn").forEach(b => b.classList.remove("active"));
+  document
+    .querySelectorAll(".events-panel")
+    .forEach((p) => p.classList.remove("active"));
+  document
+    .querySelectorAll(".toggle-btn")
+    .forEach((b) => b.classList.remove("active"));
   const panel = document.getElementById(id);
   if (panel) panel.classList.add("active");
-  if (btn)   btn.classList.add("active");
+  if (btn) btn.classList.add("active");
 }
-
-
-
 
 /* ─────────────────────────────────────────────────────────────────
    5. SCROLL-TO-TOP BUTTON
@@ -85,33 +85,39 @@ if (scrollTopBtn) {
   });
 }
 
-
 /* ─────────────────────────────────────────────────────────────────
    6. REVEAL ON SCROLL ANIMATION
    ───────────────────────────────────────────────────────────────── */
 (function initReveal() {
-  const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-  const observer  = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const inPanel   = entry.target.closest(".events-panel");
-      const inGallery = entry.target.closest(".gallery-grid");
-      const delay = (inPanel || inGallery)
-        ? Array.from(entry.target.parentElement.children).indexOf(entry.target) * 80
-        : 0;
-      setTimeout(() => entry.target.classList.add("visible"), delay);
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.1 });
-  revealEls.forEach(el => observer.observe(el));
+  const revealEls = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right",
+  );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const inPanel = entry.target.closest(".events-panel");
+        const inGallery = entry.target.closest(".gallery-grid");
+        const delay =
+          inPanel || inGallery
+            ? Array.from(entry.target.parentElement.children).indexOf(
+                entry.target,
+              ) * 80
+            : 0;
+        setTimeout(() => entry.target.classList.add("visible"), delay);
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.1 },
+  );
+  revealEls.forEach((el) => observer.observe(el));
 })();
-
 
 /* ─────────────────────────────────────────────────────────────────
    7. EVENT SELECTOR TOGGLE
    ───────────────────────────────────────────────────────────────── */
 (function initEventSelector() {
-  const btn       = document.getElementById("event-selector");
+  const btn = document.getElementById("event-selector");
   const container = document.getElementById("event-selector-container");
   if (!btn || !container) return;
   btn.addEventListener("click", () => {
@@ -123,73 +129,252 @@ if (scrollTopBtn) {
   });
 })();
 
-
 /* ─────────────────────────────────────────────────────────────────
-   8. EVENT CHECKBOX → PARTICIPANT PANEL + LIVE FEE
+   8. DYNAMIC EVENT LIST + PARTICIPANT FIELDS
    ───────────────────────────────────────────────────────────────── */
-(function initEventCheckboxes() {
-  const EVENT_CONFIG = {
-    "Battlegrounds Mobile": { regId: "bgmi-reg",   fee: 100 },
-    "TechXcellence":        { regId: "techx-reg",  fee: 200 },
-    "Web Techno":           { regId: "web-reg",    fee: 300 },
-    "Hackathon":            { regId: "hack-reg",   fee: 400 },
-    "Digital Heist":        { regId: "dheist-reg", fee: 500 },
-    "Patriotic Songs":      { regId: "pat-reg",    fee: 600 },
-    "Classical Dance":      { regId: "cdance-reg", fee: 700 },
-    "Folk Dance":           { regId: "fdance-reg", fee: 800 },
+(function initDynamicEvents() {
+  /* ── Event configuration ─────────────────────────────────────── */
+  const EVENT_PARTICIPANTS = {
+    "Bug Bash": 2,
+    "Secret Vault": 2,
+    Bgmi: 4,
+    "It Quiz": 2,
+    "Book Hunt": 2,
+    "Shark Task Competition": 2,
+    "Biological Specimen Rangoli": 1,
+    "Poster Making on Gender": 2,
+    "Business Quiz": 2,
+    "Best Mgt Team": 3,
+    "Best Entrepreneur": 1,
+    "Taxation Consultant Simulation": 2,
+    "Best Event Mgt": 3,
+    "Ai go Rhythm": 2,
+    "Vanaspati Shodha": 2,
+    "Elemental Encounters": 2,
+    "Reaction Race": 2,
+    "Mock Press": 1,
+    "Quiz Competition": 2,
+    "Sanskrit Elocution": 1,
+    "Sanskrit General Quiz": 2,
+    "Story Writing": 1,
+    "Turn Coat": 1,
+    "Batuni Batak Debate": 2,
+    Antakshari: 2,
+    "Science Melody": 2,
+    Collage: 2,
+    Drawing: 1,
+    "Collage Making": 2,
+    Skit: 10,
+    Padachitra: 1,
+    "Hani Hani Kavithe": 1,
+    "Data Interpretation": 2,
   };
 
+  /* ── Fee map (₹ per event) — adjust as needed ────────────────── */
+  const FEE_MAP = {
+    "Bug Bash": 100,
+    "Secret Vault": 100,
+    Bgmi: 100,
+    "It Quiz": 100,
+    "Book Hunt": 100,
+    "Shark Task Competition": 100,
+    "Biological Specimen Rangoli": 100,
+    "Poster Making on Gender": 100,
+    "Business Quiz": 100,
+    "Best Mgt Team": 100,
+    "Best Entrepreneur": 100,
+    "Taxation Consultant Simulation": 100,
+    "Best Event Mgt": 100,
+    "Ai go Rhythm": 100,
+    "Vanaspati Shodha": 100,
+    "Elemental Encounters": 100,
+    "Reaction Race": 100,
+    "Mock Press": 100,
+    "Quiz Competition": 100,
+    "Sanskrit Elocution": 100,
+    "Sanskrit General Quiz": 100,
+    "Story Writing": 100,
+    "Turn Coat": 100,
+    "Batuni Batak Debate": 100,
+    Antakshari: 100,
+    "Science Melody": 100,
+    Collage: 100,
+    Drawing: 100,
+    "Collage Making": 100,
+    Skit: 100,
+    Padachitra: 100,
+    "Hani Hani Kavithe": 100,
+    "Data Interpretation": 100,
+  };
+
+  /* ── Category grouping ───────────────────────────────────────── */
+  const CATEGORIES = {
+    "Academic Events": [
+      "Bug Bash",
+      "Secret Vault",
+      "Bgmi",
+      "It Quiz",
+      "Book Hunt",
+      "Shark Task Competition",
+      "Biological Specimen Rangoli",
+      "Poster Making on Gender",
+      "Business Quiz",
+      "Best Mgt Team",
+      "Best Entrepreneur",
+      "Taxation Consultant Simulation",
+      "Best Event Mgt",
+      "Ai go Rhythm",
+      "Vanaspati Shodha",
+      "Elemental Encounters",
+      "Reaction Race",
+      "Mock Press",
+      "Quiz Competition",
+      "Data Interpretation",
+      "Sanskrit Elocution",
+      "Sanskrit General Quiz",
+      "Story Writing",
+      "Turn Coat",
+      "Batuni Batak Debate",
+      "Antakshari",
+      "Science Melody",
+      "Collage",
+      "Drawing",
+      "Collage Making",
+      "Skit",
+      "Padachitra",
+      "Hani Hani Kavithe",
+    ],
+    "Cultural Events": [],
+  };
+
+  /* ── Helpers ─────────────────────────────────────────────────── */
+  function slugify(name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  }
+
+  function buildParticipantRows(eventName, count) {
+    let html = `<p class="participants-heading">Participants (${count > 1 ? "Team of " + count : "Individual"})</p>`;
+    for (let i = 1; i <= count; i++) {
+      html += `
+        <div class="participant-row">
+          <input
+            type="text"
+            class="participant-name"
+            data-event="${eventName}"
+            data-index="${i}"
+            placeholder="Participant ${i} – Full Name" />
+          <input
+            type="tel"
+            class="participant-phone"
+            data-event="${eventName}"
+            data-index="${i}"
+            placeholder="Participant ${i} – Phone" />
+        </div>`;
+    }
+    return html;
+  }
+
+  /* ── Render checkboxes + panels into #dynamic-event-list ─────── */
+  const container = document.getElementById("dynamic-event-list");
+  if (!container) return;
+
+  let html = "";
+  Object.entries(CATEGORIES).forEach(([category, events]) => {
+    html += `<p class="event-category-label">${category}</p>`;
+    events.forEach((eventName) => {
+      const slug = slugify(eventName);
+      const fee = FEE_MAP[eventName] || 0;
+      const pCount = EVENT_PARTICIPANTS[eventName] || 1;
+
+      html += `
+        <label class="checkbox-item">
+          <span class="checkmark-box"></span>
+          <input type="checkbox" name="event[]" value="${eventName}" id="chk-${slug}" data-fee="${fee}" />
+          <span>${eventName} <em class="fee-plain">₹${fee}</em></span>
+        </label>
+        <div class="event-reg" id="reg-${slug}">
+          ${buildParticipantRows(eventName, pCount)}
+        </div>`;
+    });
+  });
+
+  container.innerHTML = html;
+
+  /* ── Fee display ─────────────────────────────────────────────── */
   const feeDisplay = document.getElementById("feeDisplay");
 
   function updateFee() {
     let total = 0;
-    document.querySelectorAll('input[name="event[]"]:checked').forEach(cb => {
-      const cfg = EVENT_CONFIG[cb.value];
-      if (cfg) total += cfg.fee;
+    document.querySelectorAll('input[name="event[]"]:checked').forEach((cb) => {
+      total += FEE_MAP[cb.value] || 0;
     });
     if (feeDisplay) feeDisplay.textContent = total.toLocaleString("en-IN");
   }
 
-  document.querySelectorAll('input[name="event[]"]').forEach(cb => {
-    cb.addEventListener("change", function () {
-      const cfg = EVENT_CONFIG[this.value];
-      if (!cfg) return;
-      const panel = document.getElementById(cfg.regId);
-      if (panel) {
-        panel.classList.toggle("visible", this.checked);
-        if (!this.checked) {
-          panel.querySelectorAll("input").forEach(inp => (inp.value = ""));
-        }
-      }
-      updateFee();
-    });
+  /* ── Checkbox change → show/hide panel + clear inputs ───────── */
+  container.addEventListener("change", function (e) {
+    const cb = e.target;
+    if (cb.type !== "checkbox" || cb.name !== "event[]") return;
+
+    const slug = slugify(cb.value);
+    const panel = document.getElementById("reg-" + slug);
+    if (!panel) return;
+
+    if (cb.checked) {
+      panel.classList.add("visible");
+    } else {
+      panel.classList.remove("visible");
+      panel.querySelectorAll("input").forEach((inp) => (inp.value = ""));
+    }
+    updateFee();
   });
 })();
 
-
 /* ─────────────────────────────────────────────────────────────────
    9. FORM SUBMISSION
-   ─ Participants are sent as JSON grouped by event name so the
-     Google Apps Script knows exactly which participants belong
-     to which event — no more mixing across sheets.
    ───────────────────────────────────────────────────────────────── */
 (function initRegistration() {
-
-  const SCRIPT_URL      = "https://script.google.com/macros/s/AKfycbxiwFAVuJMjT9wF0S5-2Fp0EUGS7bR3qMH4cOfZPaBq0rSmhjbdOpvxpV50BvZrbnOi/exec";
+  const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbxiwFAVuJMjT9wF0S5-2Fp0EUGS7bR3qMH4cOfZPaBq0rSmhjbdOpvxpV50BvZrbnOi/exec";
   const WHATSAPP_NUMBER = "919019177440";
 
   const FEE_MAP = {
-    "Battlegrounds Mobile": 100,
-    "TechXcellence":        200,
-    "Web Techno":           300,
-    "Hackathon":            400,
-    "Digital Heist":        500,
-    "Patriotic Songs":      600,
-    "Classical Dance":      700,
-    "Folk Dance":           800,
+    "Bug Bash": 100,
+    "Secret Vault": 100,
+    Bgmi: 100,
+    "It Quiz": 100,
+    "Book Hunt": 100,
+    "Shark Task Competition": 100,
+    "Biological Specimen Rangoli": 100,
+    "Poster Making on Gender": 100,
+    "Business Quiz": 100,
+    "Best Mgt Team": 100,
+    "Best Entrepreneur": 100,
+    "Taxation Consultant Simulation": 100,
+    "Best Event Mgt": 100,
+    "Ai go Rhythm": 100,
+    "Vanaspati Shodha": 100,
+    "Elemental Encounters": 100,
+    "Reaction Race": 100,
+    "Mock Press": 100,
+    "Quiz Competition": 100,
+    "Sanskrit Elocution": 100,
+    "Sanskrit General Quiz": 100,
+    "Story Writing": 100,
+    "Turn Coat": 100,
+    "Batuni Batak Debate": 100,
+    Antakshari: 100,
+    "Science Melody": 100,
+    Collage: 100,
+    Drawing: 100,
+    "Collage Making": 100,
+    Skit: 100,
+    Padachitra: 100,
+    "Hani Hani Kavithe": 100,
+    "Data Interpretation": 100,
   };
 
-  const form      = document.getElementById("regForm");
+  const form = document.getElementById("regForm");
   const submitBtn = document.getElementById("btn-submit");
   const successEl = document.getElementById("successMsg");
   if (!form) return;
@@ -198,15 +383,13 @@ if (scrollTopBtn) {
     e.preventDefault();
     if (submitBtn.disabled) return;
 
-    /* Leader details */
-    const name    = document.getElementById("fname").value.trim();
+    const name = document.getElementById("fname").value.trim();
     const college = document.getElementById("college").value.trim();
-    const email   = document.getElementById("email").value.trim();
-    const phone   = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
 
-    /* Selected events */
     const selectedEvents = [];
-    document.querySelectorAll('input[name="event[]"]:checked').forEach(cb => {
+    document.querySelectorAll('input[name="event[]"]:checked').forEach((cb) => {
       selectedEvents.push(cb.value);
     });
 
@@ -215,67 +398,47 @@ if (scrollTopBtn) {
       return;
     }
 
-    /* ── KEY FIX ──────────────────────────────────────────────────
-       Build a JSON object where each KEY is the event name and
-       each VALUE is an array of { name, phone } objects.
-       This way the Apps Script receives perfectly grouped data.
-       Example:
-       {
-         "Battlegrounds Mobile": [
-           { "name": "Player 1", "phone": "9012384756" },
-           { "name": "Player 2", "phone": "1234567890" }
-         ],
-         "TechXcellence": [
-           { "name": "Player 3", "phone": "9876543210" }
-         ]
-       }
-    ─────────────────────────────────────────────────────────────── */
+    /* Build participants grouped by event */
     const participantsByEvent = {};
-
-    selectedEvents.forEach(eventName => {
-      const nameInputs  = document.querySelectorAll(`.participant-name[data-event="${eventName}"]`);
-      const phoneInputs = document.querySelectorAll(`.participant-phone[data-event="${eventName}"]`);
-
+    selectedEvents.forEach((eventName) => {
+      const nameInputs = document.querySelectorAll(
+        `.participant-name[data-event="${eventName}"]`,
+      );
+      const phoneInputs = document.querySelectorAll(
+        `.participant-phone[data-event="${eventName}"]`,
+      );
       const participants = [];
       nameInputs.forEach((inp, idx) => {
-        const pName  = inp.value.trim();
+        const pName = inp.value.trim();
         const pPhone = phoneInputs[idx] ? phoneInputs[idx].value.trim() : "";
-        if (pName) {
-          participants.push({ name: pName, phone: pPhone });
-        }
+        if (pName) participants.push({ name: pName, phone: pPhone });
       });
-
       participantsByEvent[eventName] = participants;
     });
 
-    /* Total fee */
-    const totalFee = selectedEvents.reduce((sum, ev) => sum + (FEE_MAP[ev] || 0), 0);
+    const totalFee = selectedEvents.reduce(
+      (sum, ev) => sum + (FEE_MAP[ev] || 0),
+      0,
+    );
 
-    /* Disable button */
     submitBtn.disabled = true;
     submitBtn.querySelector("span").textContent = "Registering\u2026 \u25c6";
 
-    /* Build FormData */
     const formData = new FormData();
-    formData.append("name",    name);
-    formData.append("phone",   phone);
-    formData.append("email",   email);
+    formData.append("name", name);
+    formData.append("phone", phone);
+    formData.append("email", email);
     formData.append("college", college);
-    formData.append("events",  selectedEvents.join(", "));
+    formData.append("events", selectedEvents.join(", "));
     formData.append("totalFee", totalFee);
     formData.append("timestamp", new Date().toLocaleString("en-IN"));
-
-    /* Send participants as a clean JSON string — grouped by event */
     formData.append("participantsJSON", JSON.stringify(participantsByEvent));
 
-    /* POST to Google Apps Script */
     fetch(SCRIPT_URL, { method: "POST", body: formData })
-      .then(res => res.text())
+      .then((res) => res.text())
       .then(() => {
-
-        /* WhatsApp message */
         let participantLines = "";
-        selectedEvents.forEach(ev => {
+        selectedEvents.forEach((ev) => {
           const list = participantsByEvent[ev];
           participantLines += `\n*${ev}*\n`;
           if (list && list.length > 0) {
@@ -290,27 +453,79 @@ if (scrollTopBtn) {
         const message =
           `*\ud83c\udf93 NEW REGISTRATION \u2013 PRAJNA 2026*\n\n` +
           `*Team Leader / Faculty*\n` +
-          `Name: ${name}\n` +
-          `College: ${college}\n` +
-          `Phone: ${phone}\n` +
-          `Email: ${email}\n\n` +
+          `Name: ${name}\nCollege: ${college}\nPhone: ${phone}\nEmail: ${email}\n\n` +
           `*Events & Participants*${participantLines}\n` +
           `*Total Fee: \u20b9${totalFee.toLocaleString("en-IN")}*\n\n` +
           `Time: ${new Date().toLocaleString("en-IN")}`;
 
         window.open(
           `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
-          "_blank"
+          "_blank",
         );
 
         form.style.display = "none";
         if (successEl) successEl.style.display = "block";
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("Registration error:", err);
         submitBtn.disabled = false;
-        submitBtn.querySelector("span").textContent = "Register Now \u00a0\u25c6";
+        submitBtn.querySelector("span").textContent =
+          "Register Now \u00a0\u25c6";
         alert("Something went wrong. Please try again.");
       });
   });
+})();
+
+
+/* ═══════════════════════════════════════════════════════════════
+   EVENTS POPUP — ADD THIS BLOCK TO YOUR script.js
+   ═══════════════════════════════════════════════════════════════ */
+
+(function initEventPopup() {
+  const overlay    = document.getElementById('eventOverlay');
+  const closeBtn   = document.getElementById('popupClose');
+  const popupName  = document.getElementById('popupEventName');
+  const popupImg   = document.getElementById('popupImage');
+  const popupDets  = document.getElementById('popupDetails');
+
+  if (!overlay) return;
+
+  /* Open: fired by any "Explore More" button click */
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.explore-btn');
+    if (!btn) return;
+
+    const card = btn.closest('.event-card');
+    if (!card) return;
+
+    /* Pull data from card's data attributes */
+    popupName.textContent = card.dataset.name  || '';
+    popupImg.src          = card.dataset.img   || '';
+    popupImg.alt          = card.dataset.name  || '';
+
+    /* Clone the hidden .event-details innerHTML into the popup */
+    const detailsEl = card.querySelector('.event-details');
+    popupDets.innerHTML = detailsEl ? detailsEl.innerHTML : '';
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  /* Close: X button */
+  closeBtn.addEventListener('click', closePopup);
+
+  /* Close: click outside the popup box */
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closePopup();
+  });
+
+  /* Close: Escape key */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closePopup();
+  });
+
+  function closePopup() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 })();
