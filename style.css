@@ -502,6 +502,26 @@ section {
   align-items: center;
 }
 
+.explore-fest{
+  max-width: 850px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.explore-fest p{
+  font-size: 18px;
+  line-height: 1.9;
+  letter-spacing: 0.5px;
+  color: #2f5f5e;
+  margin-bottom: 25px;
+}
+
+.gu-content{
+  font-size: 20px;
+  margin: 50px;
+}
+
+
 .explore-title{
    font-family: "Cinzel", serif;
   font-size: 2rem;
@@ -2367,4 +2387,14 @@ footer {
    position: relative;
   z-index: 2;
    font-family: 'Inter', sans-serif;
+}
+
+#about p{
+  max-width: 900px;       
+  margin: 20px auto;      
+  text-align: center;      
+  font-size: 20px;         
+  line-height: 1.8;        
+  color: #1d3433;         
+  padding: 0 20px;         
 }
