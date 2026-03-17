@@ -1167,7 +1167,8 @@ section {
     grid-template-columns: 1fr;
   }
   .register-container {
-    padding: 2rem 1.2rem;
+    padding: 1rem 0.5rem;
+    width: 100%;
   }
 }
 
@@ -1558,15 +1559,13 @@ footer {
     gap: 2.5rem;
   }
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 14px;
   }
-  .gallery-item:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-  .gallery-item:nth-child(4) {
-    grid-column: span 1;
+
+  .gallery-item {
+    height: 180px;
   }
   .form-row {
     grid-template-columns: 1fr;
@@ -1594,7 +1593,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .register-container {
-    padding: 2rem 1.2rem;
+    padding: 1rem 0.5rem;
   }
   .pronites-banner {
     aspect-ratio: 4/3;
@@ -2071,7 +2070,7 @@ footer {
 }
 
 .register-container {
-  width: 60%;
+  width: 80%;
 }
 
 #register {
@@ -2397,4 +2396,31 @@ footer {
   line-height: 1.8;        
   color: #1d3433;         
   padding: 0 20px;         
+}
+
+/* Mobile form fix */
+@media (max-width: 768px) {
+  .participant-row {
+    grid-template-columns: 1fr;
+  }
+
+  .participant-row input {
+    width: 100%;
+  }
+
+#reg-form{
+  width: 100%;
+}
+}
+
+.event-category-label{
+  grid-column: 1 / -1;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 30px 0 10px;
+  border-bottom: 1px solid var(--brown-border);
+  padding-bottom: 6px;
 }
