@@ -1229,9 +1229,9 @@ section {
 
 .gallery-placeholder span {
   font-family: "Space Mono", monospace;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   letter-spacing: 0.2em;
-  color: var(--teal-dark);
+  color: var(--cream);
   opacity: 0.6;
   text-align: center;
 }
@@ -1255,8 +1255,8 @@ section {
   transition: all 0.4s;
 }
 
-.gallery-item:hover .gallery-overlay {
-  background: rgba(246, 231, 201, 0.5);
+/*gallery-item:hover .gallery-overlay {
+  background: rgba(231, 222, 203, 0.5);
 }
 
 .gallery-item:hover .gallery-overlay i {
@@ -1446,7 +1446,7 @@ footer {
 .footer-tagline {
   font-style: italic;
   color: rgba(14, 62, 69, 0.55);
-  font-size: 0.95rem;
+  font-size: 0.99rem;
   margin-bottom: 2rem;
 }
 .social-links {
