@@ -135,20 +135,20 @@ if (scrollTopBtn) {
 (function initDynamicEvents() {
   /* ── Event configuration ─────────────────────────────────────── */
   const EVENT_PARTICIPANTS = {
-    "Bug Bash": 2,
+    "Anime Whiz": 2,
     "Secret Vault": 2,
     "Bgmi": 4,
     "It Quiz": 2,
     "Book Hunt": 2,
     "Shark Task Competition": 2,
     "Biological Specimen Rangoli": 1,
-    "Poster Making on Gender": 2,
+    "Poster Making": 2,
     "Business Quiz": 2,
     "Best Mgt Team": 3,
     "Best Entrepreneur": 1,
     "Taxation Consultant Simulation": 2,
     "Best Event Mgt": 3,
-    "Ai go Rhythm": 2,
+    "Al go Rhythm": 2,
     "Vanaspati Shodha": 2,
     "Elemental Encounters": 2,
     "Reaction Race": 2,
@@ -158,17 +158,16 @@ if (scrollTopBtn) {
     "Sanskrit General Quiz": 2,
     "Story Writing": 1,
     "Turn Coat": 1,
-    "Antakshari": 2,
     "Vichaar yudh": 2,
-    "Science Melody": 2,
-    "Turn Coat(Physics)": 2,
+    "Antakshari": 2,
+    "Physicon": 2,
     "Collage": 2,
-    "Drawing": 1,
     "Collage Making": 2,
     "Skit": 10,
+    "Data Interpretation": 2,
     "Padachitra": 1,
     "Hani Hani Kavithe": 1,
-    "Data Interpretation": 2,
+    "Documentary Making": 1,
     "Tala Taranga": 8,
     "Akarshati": 1,
     "Vridavana Vaibhava": 8,
@@ -179,20 +178,20 @@ if (scrollTopBtn) {
 
   /* ── Fee map (₹ per event) — adjust as needed ────────────────── */
   const FEE_MAP = {
-    "Bug Bash": 100,
+    "Anime Whiz": 100,
     "Secret Vault": 100,
     "Bgmi": 100,
     "It Quiz": 100,
     "Book Hunt": 100,
     "Shark Task Competition": 100,
     "Biological Specimen Rangoli": 100,
-    "Poster Making on Gender": 100,
+    "Poster Making": 100,
     "Business Quiz": 100,
     "Best Mgt Team": 100,
     "Best Entrepreneur": 100,
     "Taxation Consultant Simulation": 100,
     "Best Event Mgt": 100,
-    "Ai go Rhythm": 100,
+    "Al go Rhythm": 100,
     "Vanaspati Shodha": 100,
     "Elemental Encounters": 100,
     "Reaction Race": 100,
@@ -202,17 +201,15 @@ if (scrollTopBtn) {
     "Sanskrit General Quiz": 100,
     "Story Writing": 100,
     "Turn Coat": 100,
-    "Antakshari": 100,
     "Vichaar yudh": 100,
-    "Science Melody": 100,
-    "Turn Coat(Physics)": 100,
+    "Antakshari": 100,
+    "Physicon": 100,
     "Collage": 100,
-    "Drawing": 100,
     "Collage Making": 100,
     "Skit": 100,
+    "Data Interpretation": 100,
     "Padachitra": 100,
     "Hani Hani Kavithe": 100,
-    "Data Interpretation": 100,
     "Tala Taranga": 100,
     "Akarshati": 100,
     "Vridavana Vaibhava": 100,
@@ -224,40 +221,39 @@ if (scrollTopBtn) {
   /* ── Category grouping ───────────────────────────────────────── */
   const CATEGORIES = {
     "Academic Events": [
-      "Bug Bash",
+      "Anime Whiz",
       "Secret Vault",
       "Bgmi",
       "It Quiz",
       "Book Hunt",
       "Shark Task Competition",
       "Biological Specimen Rangoli",
-      "Poster Making on Gender",
+      "Poster Making",
       "Business Quiz",
       "Best Mgt Team",
       "Best Entrepreneur",
       "Taxation Consultant Simulation",
       "Best Event Mgt",
-      "Ai go Rhythm",
+      "Al go Rhythm",
       "Vanaspati Shodha",
       "Elemental Encounters",
       "Reaction Race",
       "Mock Press",
       "Quiz Competition",
-      "Data Interpretation",
       "Sanskrit Elocution",
       "Sanskrit General Quiz",
       "Story Writing",
       "Turn Coat",
-      "Antakshari",
       "Vichaar yudh",
-      "Science Melody",
-      "Turn Coat(Physics)",
+      "Antakshari",
+      "Physicon",
       "Collage",
-      "Drawing",
       "Collage Making",
       "Skit",
+      "Data Interpretation",
       "Padachitra",
       "Hani Hani Kavithe",
+      "Documentary Making",
     ],
     "Cultural Events": [
       "Tala Taranga",
@@ -361,20 +357,20 @@ if (scrollTopBtn) {
   const WHATSAPP_NUMBER = "919019177440";
 
   const FEE_MAP = {
-    "Bug Bash": 100,
+    "Anime Whiz": 100,
     "Secret Vault": 100,
-    "Bgmi": 100,
+    Bgmi: 100,
     "It Quiz": 100,
     "Book Hunt": 100,
     "Shark Task Competition": 100,
     "Biological Specimen Rangoli": 100,
-    "Poster Making on Gender": 100,
+    "Poster Making": 100,
     "Business Quiz": 100,
     "Best Mgt Team": 100,
     "Best Entrepreneur": 100,
     "Taxation Consultant Simulation": 100,
     "Best Event Mgt": 100,
-    "Ai go Rhythm": 100,
+    "Al go Rhythm": 100,
     "Vanaspati Shodha": 100,
     "Elemental Encounters": 100,
     "Reaction Race": 100,
@@ -384,23 +380,21 @@ if (scrollTopBtn) {
     "Sanskrit General Quiz": 100,
     "Story Writing": 100,
     "Turn Coat": 100,
-    "Batuni Batak Debate": 100,
-    "Antakshari": 100,
-    "Vichaar yudh":100,
-    "Science Melody": 100,
-    "Turn Coat(Physics)": 100,
-    "Collage": 100,
-    "Drawing": 100,
+    "Vichaar yudh": 100,
+    Antakshari: 100,
+    Physicon: 100,
+    Collage: 100,
     "Collage Making": 100,
-    "Skit": 100,
-    "Padachitra": 100,
-    "Hani Hani Kavithe": 100,
+    Skit: 100,
     "Data Interpretation": 100,
+    Padachitra: 100,
+    "Hani Hani Kavithe": 100,
+    "Documentary Making": 100,
     "Tala Taranga": 100,
-    "Akarshati": 100,
+    Akarshati: 100,
     "Vridavana Vaibhava": 100,
-    "Swaranjali": 100,
-    "Jagruti": 100,
+    Swaranjali: 100,
+    Jagruti: 100,
     "Ayodhya Vaibhavam": 100,
   };
 
@@ -560,30 +554,28 @@ if (scrollTopBtn) {
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
+  const eventDate = new Date("April 6, 2026 00:00:00").getTime();
 
-const eventDate = new Date("April 6, 2026 00:00:00").getTime();
+  const timer = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
 
-const timer = setInterval(function () {
+    if (distance <= 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "Event Started";
+      return;
+    }
 
-  const now = new Date().getTime();
-  const distance = eventDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  if (distance <= 0) {
-    clearInterval(timer);
-    document.getElementById("countdown").innerHTML = "Event Started";
-    return;
-  }
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
-
-}, 1000);
-
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+  }, 1000);
 });
