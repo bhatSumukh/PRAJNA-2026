@@ -326,7 +326,7 @@ section {
   font-family: "Space Mono", monospace;
   font-size: 0.9rem;
   letter-spacing: 0.4em;
-  color: var(--gold);
+    color:#1e4d4f;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
@@ -371,7 +371,7 @@ section {
 }
 
 .hero-date {
-  font-family: "Roboto";
+   font-family: 'Inter', sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-style: italic;
   color: var(--teal-dark);
@@ -495,14 +495,30 @@ section {
   padding: 8rem 2rem;
   background: #efe2c2;
 }
-.explore-grid {
-  max-width: 1100px;
-  margin: 4rem auto 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+.explore-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
+
+.explore-title{
+   font-family: "Cinzel", serif;
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: 0.12em;
+  background: linear-gradient(135deg, #0e3e45, #1f6f78, #3e8e97);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.explore-fest, .general-guideline{
+  text-align: left;
+  
+}
+
 .explore-text p {
   font-size: 1.15rem;
   line-height: 1.9;
@@ -2342,3 +2358,13 @@ footer {
 }
 
 
+.countdown-timer{
+  margin-top:20px;
+  font-size:28px;
+  letter-spacing:3px;
+  color:#1e4d4f;
+  font-weight:600;
+   position: relative;
+  z-index: 2;
+   font-family: 'Inter', sans-serif;
+}
