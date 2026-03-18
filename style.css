@@ -2406,3 +2406,34 @@ footer {
     width:100%;
   }
 }
+
+.brochure-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brc-btn{
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #1f6f78, #3e8e97);
+  color: #fff7e3;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.brc-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(31, 111, 120, 0.35);
+  color: #fff7e3;
+  background: linear-gradient(135deg, #c9a84c, #e8c96f);
+}
