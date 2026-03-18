@@ -140,7 +140,7 @@ if (scrollTopBtn) {
     Bgmi: 4,
     "It Quiz": 2,
     "Book Hunt": 2,
-    "Shark Task Competition": 2,
+    "Shark Tank Competition": 2,
     "Biological Specimen Rangoli": 1,
     "Poster Making": 2,
     "Business Quiz": 2,
@@ -168,12 +168,12 @@ if (scrollTopBtn) {
     Padachitra: 1,
     "Hani Hani Kavithe": 1,
     "Documentary Making": 2,
-    "Tala Taranga": 8,
+    "Nrithya Laasya ": 8,
     Akarshati: 1,
     "Vridavana Vaibhava": 8,
     Swaranjali: 5,
     Jagruti: 8,
-    "Ayodhya Vaibhavam": 8,
+    "Ramakathamritam": 8,
   };
 
   /* ── Fee map (₹ per event) — adjust as needed ────────────────── */
@@ -183,7 +183,7 @@ if (scrollTopBtn) {
     Bgmi: 100,
     "It Quiz": 100,
     "Book Hunt": 100,
-    "Shark Task Competition": 100,
+    "Shark Tank Competition": 100,
     "Biological Specimen Rangoli": 50,
     "Poster Making": 100,
     "Business Quiz": 100,
@@ -210,12 +210,12 @@ if (scrollTopBtn) {
     "Data Interpretation": 100,
     Padachitra: 50,
     "Hani Hani Kavithe": 50,
-    "Tala Taranga": 100,
+    "Nrithya Laasya ": 100,
     Akarshati: 50,
     "Vridavana Vaibhava": 100,
     Swaranjali: 100,
     Jagruti: 100,
-    "Ayodhya Vaibhavam": 100,
+    "Ramakathamritam": 100,
   };
 
   /* ── Category grouping ───────────────────────────────────────── */
@@ -226,7 +226,7 @@ if (scrollTopBtn) {
       "Bgmi",
       "It Quiz",
       "Book Hunt",
-      "Shark Task Competition",
+      "Shark Tank Competition",
       "Biological Specimen Rangoli",
       "Poster Making",
       "Business Quiz",
@@ -256,12 +256,12 @@ if (scrollTopBtn) {
       "Documentary Making",
     ],
     "Cultural Events": [
-      "Tala Taranga",
+      "Nrithya Laasya ",
       "Akarshati",
       "Vridavana Vaibhava",
       "Swaranjali",
       "Jagruti",
-      "Ayodhya Vaibhavam",
+      "Ramakathamritam",
     ],
   };
 
@@ -362,7 +362,7 @@ if (scrollTopBtn) {
     Bgmi: 100,
     "It Quiz": 100,
     "Book Hunt": 100,
-    "Shark Task Competition": 100,
+    "Shark Tank Competition": 100,
     "Biological Specimen Rangoli": 50,
     "Poster Making": 100,
     "Business Quiz": 100,
@@ -389,12 +389,12 @@ if (scrollTopBtn) {
     "Data Interpretation": 100,
     Padachitra: 50,
     "Hani Hani Kavithe": 50,
-    "Tala Taranga": 100,
+    "Nrithya Laasya ": 100,
     Akarshati: 50,
     "Vridavana Vaibhava": 100,
     Swaranjali: 100,
     Jagruti: 100,
-    "Ayodhya Vaibhavam": 100,
+    "Ramakathamritam": 100,
   };
 
   const form = document.getElementById("regForm");
