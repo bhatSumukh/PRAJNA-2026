@@ -2424,3 +2424,9 @@ footer {
   border-bottom: 1px solid var(--brown-border);
   padding-bottom: 6px;
 }
+
+@media (max-width: 600px) {
+  .gen-guide {
+    max-width: 80%;
+  }
+}
