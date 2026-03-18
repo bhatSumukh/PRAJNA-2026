@@ -2400,10 +2400,11 @@ footer {
 
 @media (max-width: 600px) {
   .gen-guide {
-    max-width: 100%;
+    max-width: 95%;
   }
   .gu-content{
-    width:100%;
+    width:95%;
+    margin: 0;
   }
 }
 
