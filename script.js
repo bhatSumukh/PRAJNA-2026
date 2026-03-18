@@ -353,7 +353,7 @@ if (scrollTopBtn) {
    ───────────────────────────────────────────────────────────────── */
 (function initRegistration() {
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbzyYXNgsZLejm-BAXyDc3EhJ8J52DMj4SlHnucsaDPbf_9kyFjZEdRriH51vBfaskKK/exec";
+    "https://script.google.com/macros/s/AKfycbwwQ0sldSlm54zthLOihLCMByaLb8tgxyOC5gfVDNsv-jLL9c7PWsdzBYqR6O89YtML/exec";
   const WHATSAPP_NUMBER = "919019177440";
 
   const FEE_MAP = {
