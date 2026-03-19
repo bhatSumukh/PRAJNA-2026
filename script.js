@@ -172,7 +172,7 @@ if (scrollTopBtn) {
     Akarshati: 1,
     "Vridavana Vaibhava": 8,
     Swaranjali: 5,
-    Jagruti: 8,
+    Jagruti: 10,
     "Ramakathamritam": 8,
   };
 
