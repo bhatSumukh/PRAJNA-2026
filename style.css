@@ -234,7 +234,17 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.section-titlecom {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.12em;
+  background: linear-gradient(135deg, #0e3e45, #1f6f78, #3e8e97);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* ─── HERO ─── */
 #home {
   min-height: 100vh;
