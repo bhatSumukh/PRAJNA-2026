@@ -65,14 +65,22 @@ function closeMobile() {
    4. EVENTS TAB SWITCHER
    ───────────────────────────────────────────────────────────────── */
 function showTab(id, btn) {
-  document
-    .querySelectorAll(".events-panel")
-    .forEach((p) => p.classList.remove("active"));
-  document
-    .querySelectorAll(".toggle-btn")
-    .forEach((b) => b.classList.remove("active"));
+  // Hide all panels
+  document.querySelectorAll(".events-panel").forEach((p) => p.classList.remove("active"));
+  
+  // Update active button
+  document.querySelectorAll(".toggle-btn").forEach((b) => b.classList.remove("active"));
+  
+  // Show the main panel
   const panel = document.getElementById(id);
   if (panel) panel.classList.add("active");
+  
+  // If switching to academic, also show the commerce panel
+  if (id === "academic") {
+    const commercePanel = document.getElementById("commerce-academic");
+    if (commercePanel) commercePanel.classList.add("active");
+  }
+  
   if (btn) btn.classList.add("active");
 }
 
