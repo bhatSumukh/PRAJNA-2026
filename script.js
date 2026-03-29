@@ -423,6 +423,16 @@ if (scrollTopBtn) {
       return;
     }
 
+    if(name === "" && 
+       college === "" &&
+       email === "" &&
+       phone === "" 
+    ){
+      alert("Please fill all the details");
+      return;
+    }
+
+
     /* Build participants grouped by event */
     const participantsByEvent = {};
     selectedEvents.forEach((eventName) => {
