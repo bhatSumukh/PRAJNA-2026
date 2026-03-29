@@ -234,17 +234,26 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* Commerce & Management section title style */
 .section-titlecom {
   font-family: "Cinzel", serif;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(0.8rem, 2vw, 2.5rem);
   font-weight: 700;
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
   letter-spacing: 0.12em;
   background: linear-gradient(135deg, #0e3e45, #1f6f78, #3e8e97);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.com-gu-content{
+  font-size: 20px;
+  margin-left: 130px;
+
+}
+
 /* ─── HERO ─── */
 #home {
   min-height: 100vh;
@@ -531,7 +540,6 @@ section {
   font-size: 20px;
   margin: 50px;
 }
-
 
 .explore-title{
    font-family: "Cinzel", serif;
@@ -2416,6 +2424,11 @@ footer {
   .gu-content{
     width:95%;
     margin: 0;
+  }
+  .com-gu-content{
+    width:95%;
+    margin: 0;
+    font-size:18px ;
   }
 }
 
