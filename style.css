@@ -1243,19 +1243,24 @@ section {
   width: 200px;
 }
 
-.gallery-item:hover .gallery-placeholder {
-  transform: scale(1.08);
+.gallery-placeholder a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 2rem;
+  width: 15rem;
+  border-radius: 15px;
+  background-color: #f6e7c9;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease;
+}
+
+.gallery-placeholder a:hover{
+  transform: scale(1.2);
 }
 
 
-/*gallery-item:hover .gallery-overlay {
-  background: rgba(231, 222, 203, 0.5);
-}
-
-.gallery-item:hover .gallery-overlay i {
-  opacity: 1;
-  transform: scale(1);
-}
 
 /* mobile responsiveness */
 @media (max-width: 768px) {
