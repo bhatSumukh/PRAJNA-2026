@@ -147,7 +147,7 @@ if (scrollTopBtn) {
     "Secret Vault": 2,
     Bgmi: 4,
     "TECH SYMPOSIUM QUIZ": 2,
-    "Book Hunt": 2,
+    "Book Hunt": 3,
     "Shark Tank Competition": 2,
     "Zoological specimen Rangoli": 1,
     "Poster Making": 2,
