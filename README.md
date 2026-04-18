@@ -7,7 +7,7 @@
 
 ## 🌐 Live Demo
 
-🔗 [View Live Site](#) *(replace with your Vercel URL)*
+🔗 [View Live Site](https://prajna-2026.vercel.app/#home) 
 
 ---
 
@@ -34,28 +34,6 @@ The fest spans **two days**:
 
 ---
 
-## 🗂️ Project Structure
-
-```
-prajna-2026/
-│
-├── index.html          # Main page (all sections)
-├── style.css           # All styles (custom CSS)
-├── script.js           # All interactivity (vanilla JS)
-│
-├── Prajna-2024.html    # Gallery page – PRAJNA 2024
-├── Prajna-2025.html    # Gallery page – PRAJNA 2025
-│
-└── Images/             # All images and assets
-    ├── favicon.png
-    ├── clg-logo.png
-    ├── hero-logo2.png
-    ├── logo2024.png
-    ├── logo2025.png
-    └── [event images...]
-```
-
----
 
 ## 🧰 Tech Stack
 
@@ -70,39 +48,8 @@ prajna-2026/
 | Hosting    | Vercel                            |
 | Version Control | GitHub                       |
 
----
 
-## 🎪 Events Overview
 
-### Academic Events (Day 1 — April 6)
-
-Organized across departments:
-
-| Department | Events |
-|---|---|
-| Computer Science | Anime Whiz, Secret Vault, BGMI, Tech Symposium Quiz |
-| Commerce | Shark Tank, Business Quiz, Best Mgt Team, Best Entrepreneur, Taxation Consultant Simulation, Best Event Mgt |
-| Science | Vanaspati Shodha, Elemental Encounters, Reaction Race, Zoological Specimen Rangoli, Physicon |
-| Arts | Mock Press, Quiz Competition, Story Writing, Turn Coat, Vichaar Yudh, Antakshari |
-| Sanskrit | Sanskrit Elocution, Sanskrit General Quiz |
-| Fine Arts | Poster Making, Collage (AI), Collage Making, Padachitra |
-| Library | Book Hunt |
-| Media | Documentary Making |
-| Management | Al-Go-Rhythm, Data Interpretation, Skit |
-| Kannada | Hani Hani Kavithe |
-
-### Cultural Events (Day 2 — April 7)
-
-| Event | Type |
-|---|---|
-| Nrithya Laasya | Classical/Folk Dance |
-| Akarshati | Solo Performance |
-| Vridavana Vaibhava | Group Cultural |
-| Swaranjali | Music |
-| Jagruti | Group Dance |
-| Ramakathamritam | Narrative Arts |
-
----
 
 ## 🚀 Getting Started
 
@@ -164,11 +111,16 @@ This project was built by students for a real college event. If you'd like to co
 
 ---
 
+
 ## 👨‍💻 Authors
 
 Built with ❤️ by students of Poornaprajna College, Udupi.
 
----
+- **Kshama S**  
+  🔗 LinkedIn: https://www.linkedin.com/in/kshama-s-717658390/
+
+- **Sumukh B**  
+  🔗 LinkedIn:https://www.linkedin.com/in/sumukh-bhat-81820a338/
 
 ## 📄 License
 

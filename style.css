@@ -2503,62 +2503,53 @@ footer {
   margin: auto;
 }
 
-/* creators section */
-.footer-creators {
-  margin-top: 1.5rem;
-}
 
-.creator-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
-  color: var(--teal-dark);
-  opacity: 0.7;
-  margin-bottom: 0.4rem;
-  font-style: italic;
-}
-
-.creator-names {
+.creator-head{
+  font-size: 1.8rem;
+  color:#1f6f78;
   font-family: "Cinzel", serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.12em;
-  color: var(--teal);
+}
+
+.creators{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.4rem;
+  gap: 20px;
 }
-
-.creator-names span {
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.creator-names span:hover {
-  color: var(--gold);
-  text-shadow: 0 0 8px rgba(201, 168, 76, 0.5);
-}
-
-.divider {
-  opacity: 0.5;
-  font-size: 0.8rem;
-}
-
-.creator-role {
-  font-size: 0.85rem;
-  color: rgba(14, 62, 69, 0.6);
-  letter-spacing: 0.08em;
-}
-
-/* copyright tweak */
-.footer-copy {
-  margin-top: 1.8rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  color: rgba(14, 62, 69, 0.45);
-}
-
-.creator-names a{
-  color: black;
+.creators a {
+  color: #3e8e97;
+  font-size: 1.3rem;
   text-decoration: none;
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 0;
+}
+
+.creators a::before {
+  content: "";
+  background-color: #3e8e97;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.creators a:hover::before {
+  width: 100%;
+}
+
+.creators a:hover {
+  cursor: pointer;
+  color: #fff; 
 }
